@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import Navbar from "../../components/Navbar/Navbar"
 import axios from "axios"
-
+import styles from "./Post.module.css"
 export default class Post extends Component {
 
     state = { post:null}
@@ -20,7 +20,7 @@ export default class Post extends Component {
         let post;
 
         !this.state.post?post="Loading Post, Please Wait ...":post=(
-            <div>
+            <div >
                     <h3>
                         {this.state.post.title}
                     </h3>
@@ -32,10 +32,15 @@ export default class Post extends Component {
         )
         return (
 
-            <div>
+            <div >
                 <Navbar/>
-                <div>Post Page</div>
-                {post}
+                <div className={styles["content_wrapper"]}>
+                    <h3>
+                        Post Information Page
+                    </h3>
+                    {post}
+                </div>
+               
             </div>
         )
     }
