@@ -1,0 +1,7 @@
+.main_wrapper {
+    padding:25px;
+    border:1px solid gray;
+    display: inline-block;
+    min-width: 250px;
+    margin-left:20px;
+}

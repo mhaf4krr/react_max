@@ -1,0 +1,25 @@
+.nav_wrapper{
+    background-color: rgb(125, 40, 204);
+    padding:20px;
+}
+
+.nav_wrapper > ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav_wrapper > ul > li > a {
+    padding:10px;
+    text-decoration: none;
+    border: 2px solid white;
+    margin-right:20px;
+    color:white;
+    text-transform: uppercase;
+   
+}
+
+.nav_wrapper > ul > li > a:hover {
+    background-color: white;
+    color:black;
+    border:2px solid black
+}

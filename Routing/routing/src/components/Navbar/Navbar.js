@@ -1,20 +1,23 @@
 import React from 'react'
+
 import {Link} from "react-router-dom"
-import styles from "./Nav.module.css"
 
+import styles from "./Navbar.module.css"
 
-export default function Navigation() {
+export default function Navbar() {
     return (
-        <nav className={styles.navigation}>
+        <nav className={styles["nav_wrapper"]}>
             <ul>
                 <li>
-                    Home
+                    <Link to="/">Home</Link>
                 </li>
+
                 <li>
-                    All Posts
+                    <Link>All Posts</Link>
                 </li>
+
                 <li>
-                    Add Post
+                    <Link>New Post</Link>
                 </li>
             </ul>
         </nav>
