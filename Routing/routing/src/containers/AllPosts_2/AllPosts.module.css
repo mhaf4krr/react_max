@@ -1,0 +1,14 @@
+.header {
+    margin:20px;
+}
+
+.main_content{
+    width:90%;
+    margin:auto auto;
+    display: flex;
+    overflow: scroll;
+}
+
+a {
+    color:black
+}
