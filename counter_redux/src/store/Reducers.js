@@ -1,25 +1,8 @@
-let initialState = {
-    counter:0
-}
+import {combineReducers} from "redux"
+import counterReducer from "./reducers/Counter"
 
-const rootReducer = (prevState = initialState,action) =>{
-    if(action.type==="INC_COUNTER"){
-        return {
-            
-            counter:prevState.counter+1
-        }
-
-    }
-
-    if(action.type ==="RESET_COUNTER"){
-        return {
-       
-            counter:0
-        }
-    }
-
-    return prevState
-    
-}
+const rootReducer = combineReducers({
+    counter:counterReducer
+})
 
 export default rootReducer

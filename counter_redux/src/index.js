@@ -4,12 +4,25 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { createStore } from "redux"
+import { applyMiddleware, createStore } from "redux"
 
 import {Provider} from "react-redux"
 
 import reducer from "../src/store/Reducers"
-const store = createStore(reducer)
+
+/* Custom Middleware */
+
+const Logger = (store) =>{
+  return (next) =>{
+    return (action) =>{
+
+      console.log("Middleware",action)
+      return next(action)
+    }
+  }
+}
+const store = createStore(reducer,applyMiddleware(Logger))
+
 
 
 

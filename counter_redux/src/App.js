@@ -1,5 +1,5 @@
 
-
+import React from "react"
 import Counter from "../src/containers/Counter/Counter"
 import {connect} from "react-redux"
 
@@ -17,7 +17,9 @@ let handleReset = ()=>{
   props.onReset()
 }
   return (
-    <Counter counter={props.counter} increment={handleIncrement} reset={handleReset}/>
+    <div style={{margin:"auto auto"}}>
+      <Counter counter={props.counter} increment={handleIncrement} reset={handleReset}/>
+    </div>
   );
 }
 
