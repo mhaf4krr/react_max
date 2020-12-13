@@ -1,0 +1,8 @@
+.main_wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+label {
+  margin-right: 30px;
+}
