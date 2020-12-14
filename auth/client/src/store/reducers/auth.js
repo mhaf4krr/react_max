@@ -14,6 +14,14 @@ const authReducer = (prevState=initialState,action) =>{
                 token:action.payload
             }
 
+        case "LOGOUT_USER":
+            window.localStorage.removeItem("x-auth-token")
+
+            return{
+                authenticated:false,
+                token:null
+            }
+
             default: return prevState
     }
 

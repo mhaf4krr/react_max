@@ -12,6 +12,9 @@ function Navigation(props) {
                 <Link to="/auth">Auth</Link>
                 
                 {props.authenticated?<Link to="/secure">Secure</Link>:null}
+                {props.authenticated?<button onClick={()=>{
+                    props.logoutAuth()
+                }}>Logout</button>:null}
             </ul>
         </div>
     )
@@ -24,7 +27,16 @@ const mapStateToProps = (state) =>{
     }
 }
 
+const mapDispatchToProps = (dispatch) =>{
+    return {
+        logoutAuth : ()=>{
+            dispatch({
+                type:"LOGOUT_USER"
+            })
+        }
+    }
+}
 
-export default connect(mapStateToProps)(Navigation)
+export default connect(mapStateToProps,mapDispatchToProps)(Navigation)
 
 
